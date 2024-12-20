@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
+    color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Default font for the entire page */
 }
 
@@ -21,11 +21,12 @@ body, html {
 
 .blur-section {
     position: absolute;
-    top: 0;
+    top: 15%;
     right: 10%; 
-    height: 100%;
+    height: 70%;
     width: 25%;
-    background: rgba(207, 210, 255, 0.5); 
+    color:white;
+    background: rgba(141, 144, 184, 0.5); 
     backdrop-filter: blur(2px); 
     display: flex;
     flex-direction: column;
@@ -34,12 +35,12 @@ body, html {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 30px;
 }
 
 .blur-section h1 {
     margin: 0;
     font-size: 2em;
-    color: #333;
 }
 
 .blur-section .link-wrapper {
@@ -52,7 +53,7 @@ body, html {
 .blur-section a {
     text-decoration: none;
     font-size: 1.2em;
-    color: #fff;
+    color: white;
     transition: background-color 0.3s, transform 0.3s;
 }
 
