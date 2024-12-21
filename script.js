@@ -1,4 +1,5 @@
-window.addEventListener('load', () => {
-    const audio = document.getElementById('background-music');
-    audio.play();
-});
+const audio = document.getElementById('background-music');
+    window.addEventListener('load', () => {
+        audio.src = 'static/mp3/DUSTCUTTER.mp3';
+        audio.load();
+    });

@@ -19,7 +19,7 @@ body, html {
     z-index: -1;
 }
 
-.blur-section {
+.blur-container {
     position: absolute;
     top: 15%;
     right: 10%; 
@@ -35,34 +35,34 @@ body, html {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 45px;
 }
 
-.blur-section h1 {
+.blur-container h1 {
     margin: 0;
     font-size: 2em;
 }
 
-.blur-section .link-wrapper {
+.blur-container .link-wrapper {
     color: white;
     display: flex;
     align-items: center;
     margin: 10px 0;
 }
 
-.blur-section a {
+.blur-container a {
     text-decoration: none;
     font-size: 1.2em;
     color: white;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.blur-section a:hover {
+.blur-container a:hover {
     text-decoration: underline;
     transform: scale(1.05);
 }
 
-.blur-section .link-wrapper img {
+.blur-container .link-wrapper img {
     max-width: 40px;
     height: auto;
     margin-right: 10px;
