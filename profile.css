@@ -2,76 +2,155 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden; 
 }
 
 .background {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-image: url('static/img/Azure Empyrea.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(0);
     z-index: -1;
 }
 
+/* blur container */
 .blur-container {
     position: absolute;
-    top: 15%;
-    right: 10%; 
-    height: 70%;
-    width: 25%;
-    color:white;
-    background: rgba(141, 144, 184, 0.5); 
-    backdrop-filter: blur(2px); 
+    top: 20%;
+    right: 10%;
+    height: 60%;
+    width: 20%;
+    background: rgba(141, 144, 184, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 45px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .blur-container h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.blur-container .link-wrapper {
-    color: white;
+.link-wrapper {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
-.blur-container a {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.blur-container a:hover {
-    text-decoration: underline;
-    transform: scale(1.05);
-}
-
-.blur-container .link-wrapper img {
-    max-width: 40px;
-    height: auto;
+.link-wrapper img {
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
 }
 
+.link-wrapper a {
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.link-wrapper a:hover {
+    color: #ffdd57; /* Highlight color */
+}
+
+/* canvas */
 canvas {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
 }
 
+/* responsive  */
+@media (max-width: 1200px) {
+    .blur-container {
+        top: 10%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .blur-container h1 {
+        font-size: 2em;
+    }
+
+    .link-wrapper a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .blur-container {
+        top: 5%;
+        right: 5%;
+        width: 40%;
+        padding: 15px;
+    }
+
+    .blur-container h1 {
+        font-size: 1.8em;
+    }
+
+    .link-wrapper img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .link-wrapper a {
+        font-size: 0.9em;
+    }
+
+    .blur-container img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blur-container {
+        top: 5%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .blur-container h1 {
+        font-size: 1.5em;
+    }
+
+    .link-wrapper img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .link-wrapper a {
+        font-size: 0.8em;
+    }
+
+    .blur-container img {
+        width: 150px;
+        height: 150px;
+    }
+}

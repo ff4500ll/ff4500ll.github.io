@@ -2,7 +2,7 @@
 const NUM_STARS = 10;
 const STAR_SPEED = 2;
 const MAX_LIFETIME = 500;
-const ANGLE = Math.PI / 4; // 45 degrees angle
+const ANGLE = Math.PI / 3.5; 
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
