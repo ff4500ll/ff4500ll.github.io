@@ -27,7 +27,7 @@ body, html {
     height: 60%;
     width: 20%;
     background: rgba(141, 144, 184, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     color: white;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
