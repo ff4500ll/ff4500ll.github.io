@@ -22,14 +22,14 @@ body, html {
 /* blur container */
 .blur-container {
     position: absolute;
-    top: 20%;
+    top: 18%;
     right: 10%;
     height: 60%;
     width: 20%;
     background: rgba(141, 144, 184, 0.5);
     backdrop-filter: blur(2px);
     color: white;
-    border-radius: 20px;
+    border-radius: 45px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     padding: 20px;
     display: flex;
