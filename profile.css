@@ -7,6 +7,15 @@ body, html {
     overflow: hidden; 
 }
 
+.page-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded .page-content {
+    opacity: 1;
+}
+
 .background {
     position: absolute;
     top: 0;
