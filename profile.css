@@ -31,9 +31,9 @@ body.loaded .page-content {
 /* blur container */
 .blur-container {
     position: absolute;
-    top: 18%;
-    right: 10%;
-    height: 60%;
+    top: 12%;
+    right: 8%;
+    height: 72%;
     width: 20%;
     background: rgba(141, 144, 184, 0.5);
     backdrop-filter: blur(2px);
