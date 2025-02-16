@@ -1,0 +1,9 @@
+<script>
+    const fragment = new URLSearchParams(window.location.hash.slice(1));
+    const accessToken = fragment.get("access_token");
+
+    if (accessToken) {
+        localStorage.setItem("discord_token", accessToken);
+        window.location.href = "profile.html";
+    }
+</script>

@@ -34,3 +34,29 @@ window.addEventListener('load', () => {
             left.style.opacity = "0";
         }
     });
+
+    async function fetchDiscordActivity() {
+        const token = localStorage.getItem("discord_token");
+        if (!token) return;
+    
+        const response = await fetch("https://discord.com/api/users/@me", {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        const userData = await response.json();
+    
+        const activityResponse = await fetch("https://discord.com/api/users/@me/activities", {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        const activities = await activityResponse.json();
+    
+        document.getElementById("discord-user").innerText = `Logged in as: ${userData.username}`;
+        
+        if (activities.length > 0) {
+            document.getElementById("discord-activity").innerText = `Playing: ${activities[0].name}`;
+        } else {
+            document.getElementById("discord-activity").innerText = "No activity detected";
+        }
+    }
+    
+    fetchDiscordActivity();
+    
